@@ -1,9 +1,8 @@
 package com.bohui
 
-import javax.servlet.http.Cookie
+import grails.transaction.Transactional
 
 import static org.springframework.http.HttpStatus.*
-import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class UserController extends BaseController{
@@ -38,9 +37,12 @@ class UserController extends BaseController{
         }
     }
     /**
+     *
      * 注销
      */
     def logout(){
+        session.user = null
+        redirect(uri: "/")
 
     }
 

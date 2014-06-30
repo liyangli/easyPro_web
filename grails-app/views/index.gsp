@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main"/>
+		%{--<meta name="layout" content="main"/>--}%
 		<title>快项</title>
+        <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+        <!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
+        <link rel="stylesheet" href="css/invalid.css" type="text/css" media="screen" />
+        <!--                       Javascripts                       -->
+        <!-- jQuery -->
+        <g:javascript library="jquery" plugin="jquery"/>
+        <!-- jQuery Configuration -->
+        <script type="text/javascript" src="js/simpla.jquery.configuration.js"></script>
+        <!-- Facebox jQuery Plugin -->
+        <script type="text/javascript" src="js/facebox.js"></script>
 	</head>
 	<body>
     <div id="body-wrapper">
@@ -12,22 +24,42 @@
             <!-- Sidebar with logo and menu -->
             <h1 id="sidebar-title"><a href="#">快捷项目</a></h1>
             <!-- Logo (221px wide) -->
-            <a href="#"><img id="logo" src="resources/images/logo.png" alt="Simpla Admin logo" /></a>
+            <a href="#"><img id="logo" src="images/logo.png" alt="Simpla Admin logo" /></a>
             <!-- Sidebar Profile links -->
-            <div id="profile-links"> 欢迎${user.userName} 回来<br />
-                <br />
+            <div id="profile-links"> 欢迎${user?.userName} 回来 &nbsp;&nbsp;
                 <g:link title="Sign Out" action="logout" controller="user">注销</g:link> </div>
             <ul id="main-nav">
                 <!-- Accordion Menu -->
                 <li> <a href="#" class="nav-top-item current">
                     <!-- Add the class "current" to current menu item -->
-                    项目管理 </a>
+                    代码管理 </a>
                     <ul>
+                        <li><a href="#" class="current">项目管理</a></li>
                         <li><a href="#">布局管理</a></li>
-                        <li><a class="current" href="#">功能管理</a></li>
+                        <li><a  href="#">功能管理</a></li>
                         <!-- Add class "current" to sub menu items also -->
                         <li><a href="#">内容设置</a></li>
                         <li><a href="#">页面设置</a></li>
+                    </ul>
+                </li>
+                <li> <a href="#" class="nav-top-item">
+                    <!-- Add the class "current" to current menu item -->
+                    模板管理 </a>
+                    <ul>
+                        <li><a href="#" class="current">项目模板</a></li>
+                        <li><a href="#">布局模板</a></li>
+                        <li><a  href="#">功能模板</a></li>
+                        <!-- Add class "current" to sub menu items also -->
+                        <li><a href="#">内容模板</a></li>
+                        <li><a href="#">页面模板</a></li>
+                    </ul>
+                </li>
+                <li> <a href="#" class="nav-top-item">
+                    <!-- Add the class "current" to current menu item -->
+                    系统管理 </a>
+                    <ul>
+                        <li><a href="#" class="current">用户管理</a></li>
+                        <li><a href="#">权限管理</a></li>
                     </ul>
                 </li>
 
@@ -69,7 +101,7 @@
     <div class="content-box-content">
         <div class="tab-content default-tab" id="tab1">
             <!-- This is the target div. id must match the href of this div's tab -->
-            <div class="notification attention png_bg"> <a href="#" class="close"><img src="resources/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
+            <div class="notification attention png_bg"> <a href="#" class="close"><img src="images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
                 <div> This is a Content Box. You can put whatever you want in it. By the way, you can close this notification with the top-right cross. </div>
             </div>
             <table>
@@ -112,7 +144,7 @@
                     <td>Donec tortor diam</td>
                     <td>
                         <!-- Icons -->
-                        <a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
+                        <a href="#" title="Edit"><img src="images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
                 </tr>
                 <tr>
                     <td>
@@ -124,7 +156,7 @@
                     <td>Donec tortor diam</td>
                     <td>
                         <!-- Icons -->
-                        <a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
+                        <a href="#" title="Edit"><img src="images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
                 </tr>
                 <tr>
                     <td>
@@ -136,7 +168,7 @@
                     <td>Donec tortor diam</td>
                     <td>
                         <!-- Icons -->
-                        <a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
+                        <a href="#" title="Edit"><img src="images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
                 </tr>
                 <tr>
                     <td>
@@ -148,7 +180,7 @@
                     <td>Donec tortor diam</td>
                     <td>
                         <!-- Icons -->
-                        <a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
+                        <a href="#" title="Edit"><img src="images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
                 </tr>
                 <tr>
                     <td>
@@ -160,7 +192,7 @@
                     <td>Donec tortor diam</td>
                     <td>
                         <!-- Icons -->
-                        <a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
+                        <a href="#" title="Edit"><img src="images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
                 </tr>
                 <tr>
                     <td>
@@ -172,7 +204,7 @@
                     <td>Donec tortor diam</td>
                     <td>
                         <!-- Icons -->
-                        <a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
+                        <a href="#" title="Edit"><img src="images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
                 </tr>
                 <tr>
                     <td>
@@ -184,7 +216,7 @@
                     <td>Donec tortor diam</td>
                     <td>
                         <!-- Icons -->
-                        <a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
+                        <a href="#" title="Edit"><img src="images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
                 </tr>
                 <tr>
                     <td>
@@ -196,7 +228,7 @@
                     <td>Donec tortor diam</td>
                     <td>
                         <!-- Icons -->
-                        <a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
+                        <a href="#" title="Edit"><img src="images/icons/pencil.png" alt="Edit" /></a> <a href="#" title="Delete"><img src="images/icons/cross.png" alt="Delete" /></a> <a href="#" title="Edit Meta"><img src="images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> </td>
                 </tr>
                 </tbody>
             </table>

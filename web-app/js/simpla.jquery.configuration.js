@@ -7,6 +7,17 @@ $(document).ready(function(){
 		
 		$("#main-nav li a.nav-top-item").click( // When a top menu item is clicked...
 			function () {
+                var flag = $(this).hasClass("current");
+                if(flag){
+                     $(this).removeClass("current");
+                }else{
+                    var lis = $(this).parent().parent().children("li");
+                    $.each(lis,function(i,li){
+                        var aa = $(li).children("a");
+                        aa.removeClass("current");
+                    });
+                    $(this).addClass("current");
+                }
 				$(this).parent().siblings().find("ul").slideUp("normal"); // Slide up all sub menus except the one clicked
 				$(this).next().slideToggle("normal"); // Slide down the clicked sub menu
 				return false;
