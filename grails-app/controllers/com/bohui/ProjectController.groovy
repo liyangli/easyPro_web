@@ -14,6 +14,7 @@ class ProjectController extends BaseController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     def beforeInterceptor = [action: this.&auth]
     def index(Integer max) {
+        //项目中进行获取对应项目数据
         params.max = Math.min(max ?: 10, 100)
         respond Project.list(params), model:[projectInstanceCount: Project.count()]
     }

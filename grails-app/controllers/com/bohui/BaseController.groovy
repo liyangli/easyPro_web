@@ -19,8 +19,6 @@ abstract class BaseController {
             session.originalRequestParams = originalRequesteParams
             redirect(url: "/")
             return false
-        }else{
-            System.out.println(user)
         }
     }
 }
