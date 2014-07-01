@@ -13,7 +13,6 @@ abstract class BaseController {
                 def cookies = cookieUser.toString().split(",");
                 session.user = User.findByUserNameAndPassword(cookies[0],cookies[1])
                 return true
-//                User.findByUserNameAndPassword(cookieUser.subSequence(0,))
             }
             def originalRequesteParams = [controller: controllerName,action: actionName,params:params]
 
