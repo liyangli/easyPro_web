@@ -12,11 +12,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>快项</title>
     <!-- Reset Stylesheet -->
-    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-    <!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
-    <link rel="stylesheet" href="css/invalid.css" type="text/css" media="screen" />
+    <asset:stylesheet src="reset.css"/>
+    <asset:stylesheet src="style.css"/>
+    <asset:stylesheet src="invalid.css"/>
     <!-- jQuery -->
     <g:javascript library="jquery" plugin="jquery" />
     <asset:javascript src="jquery.cookie.js"/>
@@ -27,7 +25,7 @@
     <div id="login-top">
         <h1>快项</h1>
         <!-- Logo (221px width) -->
-        <a href="#"><img id="logo" src="images/logo.png" alt="快捷创建web项目" /></a> </div>
+        <asset:image src="logo.png" alt="快捷创建web项目"/>
     <!-- End #logn-top -->
     <div id="login-content">
          <g:form controller="user" action="login" method="POST">

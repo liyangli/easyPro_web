@@ -23,13 +23,13 @@ class UserController extends BaseController{
             //post请求才行
             def uu = User.findByUserNameAndPassword(user.userName,user.password)
             if(uu){
-                def remember = params.remember
-                if(remember){
-                    def userCookie = cookie("user")
-                }
+//                def remember = params.remember
+//                if(remember){
+//                    def userCookie = cookie("user")
+//                }
                 session.user = uu
                 def redirectParams = session.originalRequestParams?session.originalRequestParams:[controller:'race']
-                redirect(controller: 'index',action: 'index')
+                redirect(controller: "project",action: "index")
             }else{
                 flash.message = '用户名或者密码出错，请重新输入'
                 redirect(uri: "/")

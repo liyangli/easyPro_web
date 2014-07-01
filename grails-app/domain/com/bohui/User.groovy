@@ -11,4 +11,17 @@ class User {
         userName(blank: false,unique: true,minSize: 4,maxSize: 20)
         password(blank: false)
     }
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", loginName='" + loginName + '\'' +
+                ", flag=" + flag +
+                ", version=" + version +
+                '}';
+    }
 }
